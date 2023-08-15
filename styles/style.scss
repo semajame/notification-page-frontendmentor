@@ -1,0 +1,153 @@
+$white: hsl(0, 0%, 100%);
+$light-white: hsl(210, 60%, 98%);
+$light-grayish: hsl(211, 68%, 94%);
+$light-grayisher: hsl(205, 33%, 90%);
+$grayish-blue: hsl(219, 14%, 63%);
+$dark-grayish-blue: hsl(219, 12%, 42%);
+$very-dark-blue: hsl(224, 21%, 14%);
+$red: hsl(1, 90%, 64%);
+$blue: hsl(219, 85%, 26%);
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: $light-grayisher;
+}
+
+.container{
+    max-width: 800px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    .notification{
+        font-weight: 700;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+
+        .notif-count{
+            color: $white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            margin-left: 0.4rem;
+            background-color: $blue;
+        }
+    }
+
+    .mark-all{
+        color: $dark-grayish-blue;
+        cursor: pointer;
+
+        &:hover{
+            color: $blue;
+        }
+    }
+}
+
+main{
+    .profile-pic{
+        img{
+            max-width: 50px;
+        }
+    }
+
+    .profile{
+        display: flex;
+        align-items: center;
+        background-color: $light-white;
+        padding: 1rem;
+        border-radius: 10px;
+        margin-top: 0.8rem;
+        cursor: pointer;
+    }
+
+    .profile.active{
+        background-color: $white;
+
+        .circle{
+            display: none;
+        }
+    }
+
+    .paragraph{
+        margin-left: 1rem;
+        color: $grayish-blue;
+
+        strong:nth-child(1){
+            color: $very-dark-blue;
+            margin-right: 0.3rem;
+
+            &:hover{
+                color: $blue;
+            }
+        }
+
+        strong:nth-child(2){
+            color: $dark-grayish-blue;
+
+            &:hover{
+                color: $blue;
+            }
+        }
+
+        .chess-club{
+            color: $blue !important;
+        }
+
+        .circle{
+            background-color: $red;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: 0.3rem;
+        }
+    }
+
+    .minute{
+        color: $grayish-blue;
+        display: block;
+    }
+
+    .none-blue-profile{
+        @extend .profile;
+        background-color: $white;
+        align-items: start;
+    }
+
+    .rizky-paragraph{
+        margin-top: 1rem;
+        border: 1px solid $grayish-blue;
+        color: $dark-grayish-blue;
+        padding: 1rem;
+    }
+
+    .kimberly-container{
+        display: flex;
+        align-items: center;
+    }
+
+    .kimberly-profile{
+        @extend .none-blue-profile;
+        align-items: center;
+        justify-content: space-between;
+
+        .chess{
+            width: 50px;
+            float: right;
+        }
+    }
+}
