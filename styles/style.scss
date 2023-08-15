@@ -64,6 +64,14 @@ main{
         }
     }
 
+    .profile::after{
+        content: "";
+        position: absolute;
+        background: transparent;
+        width: 700px;
+        height: 80px;
+    }
+
     .profile{
         display: flex;
         align-items: center;
