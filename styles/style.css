@@ -45,6 +45,13 @@ header .mark-all:hover {
 main .profile-pic img {
   max-width: 50px;
 }
+main .profile::after, main .none-blue-profile::after, main .kimberly-profile::after {
+  content: "";
+  position: absolute;
+  background: transparent;
+  width: 700px;
+  height: 80px;
+}
 main .profile, main .none-blue-profile, main .kimberly-profile {
   display: flex;
   align-items: center;
