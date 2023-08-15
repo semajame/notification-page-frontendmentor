@@ -2,14 +2,16 @@
 
 const notifcount = document.querySelector(".notif-count");
 
-const profile = document.querySelectorAll(".profile");
+const profile = document.querySelectorAll(".profile::after");
+
+const profile2 = document.querySelectorAll(".profile");
 
 const accountnotif = document.querySelectorAll(".account-notif");
 
 function allasread(){
     notifcount.innerHTML = 0;
 
-    profile.forEach((account)=>{
+    profile2.forEach((account)=>{
         account.classList.add("active");
     })
 }
